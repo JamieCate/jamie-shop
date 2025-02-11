@@ -1,0 +1,13 @@
+{
+    "name": "promo",
+    "title": "Promo block",
+    "description": "A custom block.",
+    "category": "music-shop",
+    "icon": "block-default",
+    "keywords": ["promo", "promotion"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "promo.php"
+    },
+    "align": "full"
+}
