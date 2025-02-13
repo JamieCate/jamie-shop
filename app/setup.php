@@ -122,3 +122,17 @@ add_action('after_setup_theme', function () {
 //         'id' => 'sidebar-footer',
 //     ] + $config);
 // });
+
+add_filter('template_include', function ($template) {
+    if (is_shop()) {
+        return get_theme_file_path('resources/views/woocommerce/archive-product.blade.php');
+    }
+    return $template;
+});
+
+add_filter('wc_get_template', function ($template, $template_name, $args, $template_path, $default_path) {
+    if ($template_name === 'content-product.php') {
+        return get_theme_file_path('resources/views/woocommerce/content-product.blade.php');
+    }
+    return $template;
+}, 10, 5);
