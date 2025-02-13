@@ -64,4 +64,9 @@ collect(['setup', 'filters'])
         }
     });
 
- 
+    // register blocks
+    add_action( 'init', 'shop_register_acf_blocks' );
+
+    function shop_register_acf_blocks() {
+        register_block_type( get_template_directory() . '/blocks/promo');
+    }

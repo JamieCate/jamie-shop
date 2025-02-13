@@ -1,0 +1,41 @@
+.promo-container {
+    margin-top: 25px;
+    
+    .promo-cols {
+        display: flex;
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .promo-col {
+        display: flex;
+        flex-direction: column;
+        flex: 1; 
+    }
+
+    img {
+        width: -webkit-fill-available;
+    }
+
+    a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+.promo-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #272626;
+    
+    h3, p {
+        text-align: center;
+        color: white;
+        margin: 0;
+    }
+}
