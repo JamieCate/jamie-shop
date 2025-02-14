@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container products-container">
     
         @php
             $args = [
