@@ -24,6 +24,11 @@
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
                 </div>
             </form>
+            <li class="menu-item cart-menu">
+            <a href="<?php echo wc_get_cart_url(); ?>">
+                🛒 <span class="cart-total"><?php echo WC()->cart->get_cart_total(); ?></span>
+            </a>
+        </li>
         </div>
     </div>
 

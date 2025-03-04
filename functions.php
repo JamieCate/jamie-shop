@@ -64,9 +64,27 @@ collect(['setup', 'filters'])
         }
     });
 
-    // register blocks
+    // register ACF blocks
     add_action( 'init', 'shop_register_acf_blocks' );
 
     function shop_register_acf_blocks() {
         register_block_type( get_template_directory() . '/blocks/promo');
     }
+
+    function enqueue_sorting_script() {
+        wp_enqueue_script(
+            'sorting-filter',
+            get_theme_file_uri('/resources/scripts/filters/sorting.filter.js'),
+            [],
+            filemtime(get_theme_file_path('/resources/scripts/filters/sorting.filter.js')),
+            true 
+        );
+    
+        // Pass AJAX URL to JavaScript
+        wp_localize_script('sorting-filter', 'ajax_object', [
+            'ajax_url' => admin_url('admin-ajax.php')
+        ]);
+    }
+    
+    add_action('wp_enqueue_scripts', 'enqueue_sorting_script');
+    
