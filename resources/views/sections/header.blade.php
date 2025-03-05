@@ -18,7 +18,8 @@
             ?>
             <form class="form-inline my-2 my-lg-0 d-flex nav-search-area">
                 <div class="nav-search-input">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-bar">
+                    <div class="search-results"></div>
                 </div>
                 <div>
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>

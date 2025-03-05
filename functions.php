@@ -84,6 +84,14 @@ collect(['setup', 'filters'])
         wp_localize_script('sorting-filter', 'ajax_object', [
             'ajax_url' => admin_url('admin-ajax.php')
         ]);
+
+        wp_enqueue_script(
+            'custom-search-script',
+            get_template_directory_uri() . '/resources/scripts/search/search-bar.js', 
+            array('jquery'),
+            null,
+            true 
+        );
     }
     
     add_action('wp_enqueue_scripts', 'enqueue_sorting_script');

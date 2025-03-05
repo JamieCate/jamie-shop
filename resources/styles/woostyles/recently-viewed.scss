@@ -3,7 +3,8 @@
     display: flex;
     gap: 15px;
     padding: 0;
-    max-height: 600px;
+    align-items: start;
+    max-height: min-content;
     li {
         max-width: 20%;
         text-decoration: none;
@@ -26,11 +27,7 @@
     }
     img {
         width: 100%;
-        height: 33%;
+        max-height: 8%;
         object-fit: contain;
-    }
-    span {
-        display: block;
-        min-width: 100%;
     }
 }

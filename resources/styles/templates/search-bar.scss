@@ -1,0 +1,17 @@
+.search-results {
+    position: absolute;
+    background-color: white;
+    .item-container {
+        display: flex;
+        align-items: center;
+    }
+    .search-result-img {
+        height: 100px;
+    }
+    .search-title {
+        a {
+            color: black;
+            font-size: 16px;
+        }
+    }
+} 
