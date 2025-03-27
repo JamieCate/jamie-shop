@@ -21,9 +21,6 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-bar">
                     <div class="search-results"></div>
                 </div>
-                <div>
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-                </div>
             </form>
             <li class="menu-item cart-menu">
             <a href="<?php echo wc_get_cart_url(); ?>">

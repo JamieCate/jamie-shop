@@ -1,0 +1,16 @@
+.single-main-img {
+    max-height: 400px;
+}
+
+.single-submit-btn {
+    background-color: #272626;
+    border-radius: 3px;
+    border: none;
+    color: white;
+}
+
+.single-submit-btn:hover {
+    background-color: black;
+    color: white;
+    transition:  0.4s;
+}

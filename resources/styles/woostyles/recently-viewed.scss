@@ -31,3 +31,9 @@
         object-fit: contain;
     }
 }
+
+.recently-viewed-cards {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
