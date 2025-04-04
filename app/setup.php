@@ -136,3 +136,7 @@ add_filter('wc_get_template', function ($template, $template_name, $args, $templ
     }
     return $template;
 }, 10, 5);
+
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', false, null);
+}, 100);
