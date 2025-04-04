@@ -14,7 +14,8 @@
         </div>
     </div>
     <div class="second-tier-nav container">
-        <div class="nav-img"><a href="<?php echo home_url() ?>"><img src="https://files.ekmcdn.com/autopaints/resources/design/logo.png" alt=""></a></div>
+        <div class="nav-img"><a href="<?php echo home_url() ?>"><img
+                    src="https://files.ekmcdn.com/autopaints/resources/design/logo.png" alt=""></a></div>
         <div class="nav-search">{!! do_shortcode('[fibosearch]') !!}</div>
         <div class="nav-options">
 
@@ -31,43 +32,47 @@
             </a>
         </div>
     </div>
-  
+
 
 </nav>
 <div class="second-nav" style="background-color: #222222;">
-  <div class="nav-links container">
-    <div class="d-flex list-container">
-      <ul class="shop-btn">
-        <li class="shop-dropdown">
-          <i class="fa-solid fa-bars"></i>
-          <p>Shop</p>
-        </li>
-      </ul>
-      <ul class="d-flex main-links">
-        <li class="webpage_link"><a href="">About Us</a></li>
-        <li class="webpage_link"><a href="">Contact Us</a></li>
-        <li class="webpage_link"><a href="">Find A Car Paint Code</a></li>
-        <li class="webpage_link"><a href="">Privacy and Security</a></li>
-        <li class="webpage_link"><a href="">Delivery/Collection Info</a></li>
-        <li class="webpage_link"><a href="">2K &amp; Cellulose Paint</a></li>
-        <li class="webpage_link"><a href="">Trade Account</a></li>
-      </ul>
+    <div class="nav-links container">
+        <div class="d-flex list-container">
+            <ul class="shop-btn">
+                <li class="shop-dropdown">
+                    <i class="fa-solid fa-bars"></i>
+                    <p>Shop</p>
+                </li>
+            </ul>
+            <ul class="d-flex main-links">
+                <li class="webpage_link"><a href="">About Us</a></li>
+                <li class="webpage_link"><a href="">Contact Us</a></li>
+                <li class="webpage_link"><a href="">Find A Car Paint Code</a></li>
+                <li class="webpage_link"><a href="">Privacy and Security</a></li>
+                <li class="webpage_link"><a href="">Delivery/Collection Info</a></li>
+                <li class="webpage_link"><a href="">2K &amp; Cellulose Paint</a></li>
+                <li class="webpage_link"><a href="">Trade Account</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
 </div>
 
-<div class="shop-dropdown-menu container">
-  <ul>
-    <?php
-    $categories = get_terms([
-        'taxonomy'   => 'product_cat',
-        'hide_empty' => true,
-        'parent'     => 0, 
-    ]);
-    foreach ($categories as $category) {
-        echo '<li><a href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a></li>';
-    }
+<div class="subnav-grid-wrapper-bg">
+    <div class="shop-dropdown-menu subnav-grid-wrapper" data-nav-type="sub-cat-nav" data-nav-design-type="main-dropdown">
+        <div class="container">
+            <ul class="subnav-grid">
+                <?php
+$categories = get_terms([
+    'taxonomy' => 'product_cat',
+    'hide_empty' => true,
+    'parent' => 0,
+]);
+foreach ($categories as $category) {
+    echo '<li><a href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a></li>';
+}
     ?>
-  </ul>
-</div>
 
+            </ul>
+        </div>
+    </div>
+</div>
