@@ -9,7 +9,7 @@
  * @param   array  $context The context provided to the block by the post or its parent block.
  */
 
-$promo_cols = get_field('promo_cols'); // Ensure the field exists
+$promo_cols = get_field('promo_cols'); 
 ?>
 
 <div class="container">

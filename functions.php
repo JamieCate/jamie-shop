@@ -69,6 +69,7 @@ collect(['setup', 'filters'])
 
     function shop_register_acf_blocks() {
         register_block_type( get_template_directory() . '/blocks/promo');
+        register_block_type( get_template_directory() . '/blocks/banner');
     }
 
     function enqueue_sorting_script() {
@@ -95,6 +96,13 @@ collect(['setup', 'filters'])
         wp_enqueue_script(
             'nav-dropdown-script',
             get_template_directory_uri() . '/resources/scripts/nav/nav-dropdown.js', 
+            array('jquery'),
+            null,
+            true
+        );
+        wp_enqueue_script(
+            'slick-slider-script',
+            get_template_directory_uri() . '/resources/scripts/slick/slick-slider.js',
             array('jquery'),
             null,
             true

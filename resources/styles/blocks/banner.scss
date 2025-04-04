@@ -1,0 +1,44 @@
+.banner-item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+
+
+
+.items-container {
+    display: flex;
+    gap: 10px;
+
+    .banner-link {
+        display: flex;
+        gap: 10px;
+        text-decoration: none;
+        color: black;
+
+        img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    &:hover .banner-link img {
+        transform: scale(1.2);
+    }
+
+    &:hover .banner-link p {
+        text-decoration: underline;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+}
+
+.banner-background {
+    background-color: #f3f3f3;
+}

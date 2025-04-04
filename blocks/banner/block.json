@@ -1,0 +1,13 @@
+{
+    "name": "acf/banner",
+    "title": "Banner block",
+    "description": "A custom block.",
+    "category": "music-shop",
+    "icon": "block-default",
+    "keywords": ["banner", "banner"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "banner.php"
+    },
+    "align": "full"
+}
