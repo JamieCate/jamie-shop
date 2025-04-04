@@ -92,6 +92,13 @@ collect(['setup', 'filters'])
             null,
             true 
         );
+        wp_enqueue_script(
+            'nav-dropdown-script',
+            get_template_directory_uri() . '/resources/scripts/nav/nav-dropdown.js', 
+            array('jquery'),
+            null,
+            true
+        );
     }
     
     add_action('wp_enqueue_scripts', 'enqueue_sorting_script');
