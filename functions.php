@@ -70,6 +70,7 @@ collect(['setup', 'filters'])
     function shop_register_acf_blocks() {
         register_block_type( get_template_directory() . '/blocks/promo');
         register_block_type( get_template_directory() . '/blocks/banner');
+        register_block_type( get_template_directory() . '/blocks/home-carousel');
     }
 
     function enqueue_sorting_script() {

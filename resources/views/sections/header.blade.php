@@ -62,16 +62,15 @@
         <div class="container">
             <ul class="subnav-grid">
                 <?php
-$categories = get_terms([
-    'taxonomy' => 'product_cat',
-    'hide_empty' => true,
-    'parent' => 0,
-]);
-foreach ($categories as $category) {
-    echo '<li><a href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a></li>';
-}
-    ?>
-
+                    $categories = get_terms([
+                        'taxonomy' => 'product_cat',
+                        'hide_empty' => true,
+                        'parent' => 0,
+                    ]);
+                    foreach ($categories as $category) {
+                        echo '<li><a href="' . get_term_link($category) . '">' . esc_html($category->name) . '</a></li>';
+                    }
+                ?>
             </ul>
         </div>
     </div>

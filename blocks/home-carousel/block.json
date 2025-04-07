@@ -1,0 +1,13 @@
+{
+    "name": "acf/carousel",
+    "title": "Carousel block",
+    "description": "A custom block.",
+    "category": "music-shop",
+    "icon": "block-default",
+    "keywords": ["carousel", "slider"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "home-carousel.php"
+    },
+    "align": "full"
+}
