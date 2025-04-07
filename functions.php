@@ -71,6 +71,7 @@ collect(['setup', 'filters'])
         register_block_type( get_template_directory() . '/blocks/promo');
         register_block_type( get_template_directory() . '/blocks/banner');
         register_block_type( get_template_directory() . '/blocks/home-carousel');
+        register_block_type( get_template_directory() . '/blocks/special-offers-carousel');
     }
 
     function enqueue_sorting_script() {
