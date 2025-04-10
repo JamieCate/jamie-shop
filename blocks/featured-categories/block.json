@@ -1,0 +1,13 @@
+{
+    "name": "acf/feautred-categories",
+    "title": "Featured Categories block",
+    "description": "A custom block.",
+    "category": "autopaints-brighton",
+    "icon": "block-default",
+    "keywords": ["features", "categories"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "featured-categories.php"
+    },
+    "align": "full"
+}

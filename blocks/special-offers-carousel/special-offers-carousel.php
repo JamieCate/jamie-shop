@@ -1,6 +1,6 @@
 <?php
 /**
- * Banner Block Template.
+ * Special offers carousel Template.
  *
  * @param   array  $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -9,7 +9,7 @@
  * @param   array  $context The context provided to the block by the post or its parent block.
  */
 
-$carousel = get_field('special-offers-carousel');
+
 ?>
 
 <?php

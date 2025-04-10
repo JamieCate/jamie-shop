@@ -2,7 +2,7 @@
     "name": "acf/carousel",
     "title": "Carousel block",
     "description": "A custom block.",
-    "category": "music-shop",
+    "category": "autopaints-brighton",
     "icon": "block-default",
     "keywords": ["carousel", "slider"],
     "acf": {

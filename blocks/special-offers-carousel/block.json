@@ -2,7 +2,7 @@
     "name": "acf/special-offers-carousel",
     "title": "Special Offers Carousel block",
     "description": "A custom block.",
-    "category": "music-shop",
+    "category": "autopaints-brighton",
     "icon": "block-default",
     "keywords": ["carousel", "slider", "special", "offers"],
     "acf": {

@@ -2,7 +2,7 @@
     "name": "acf/banner",
     "title": "Banner block",
     "description": "A custom block.",
-    "category": "music-shop",
+    "category": "autopaints-brighton",
     "icon": "block-default",
     "keywords": ["banner", "banner"],
     "acf": {

@@ -2,7 +2,7 @@
     "name": "acf/promo",
     "title": "Promo block",
     "description": "A custom block.",
-    "category": "music-shop",
+    "category": "autopaints-brighton",
     "icon": "block-default",
     "keywords": ["promo", "promotion"],
     "acf": {
