@@ -1,0 +1,13 @@
+{
+    "name": "acf/google-map",
+    "title": "Google map block",
+    "description": "A custom block.",
+    "category": "autopaints-brighton",
+    "icon": "block-default",
+    "keywords": ["google", "map", "location"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "google-map.php"
+    },
+    "align": "full"
+}
