@@ -1,0 +1,13 @@
+{
+    "name": "acf/contact-info-cols",
+    "title": "Contact info columns block",
+    "description": "A custom block.",
+    "category": "autopaints-brighton",
+    "icon": "block-default",
+    "keywords": ["contact", "info", "cols"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "contact-info-cols.php"
+    },
+    "align": "full"
+}

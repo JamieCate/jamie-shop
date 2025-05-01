@@ -1,0 +1,14 @@
+.contact-info-cols {
+    display: grid;
+    grid-auto-flow: column dense;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    img {
+        grid-column: 1 / 2;
+        height: 400px;
+    }
+    .info-text {
+        grid-column: 2 / 2;
+    }
+}

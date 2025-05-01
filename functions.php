@@ -76,6 +76,7 @@ collect(['setup', 'filters'])
         register_block_type( get_template_directory() . '/blocks/featured-brands');
         register_block_type( get_template_directory() . '/blocks/promo-columns');
         register_block_type( get_template_directory() . '/blocks/about-us-banner');
+        register_block_type( get_template_directory() . '/blocks/contact-info-cols');
     }
 
     function enqueue_sorting_script() {
