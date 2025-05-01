@@ -83,7 +83,7 @@ collect(['setup', 'filters'])
             filemtime(get_theme_file_path('/resources/scripts/filters/sorting.filter.js')),
             true 
         );
-    
+        
         // Pass AJAX URL to JavaScript
         wp_localize_script('sorting-filter', 'ajax_object', [
             'ajax_url' => admin_url('admin-ajax.php')
@@ -113,4 +113,3 @@ collect(['setup', 'filters'])
     }
     
     add_action('wp_enqueue_scripts', 'enqueue_sorting_script');
-    

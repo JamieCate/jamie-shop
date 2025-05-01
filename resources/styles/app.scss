@@ -1,14 +1,18 @@
 @import 'bootstrap/scss/bootstrap';
 
+// Template styles
 @import 'templates/header';
+@import 'templates/fibo-search-bar.scss';
 
+// Block styles
 @import 'blocks/promo.scss';
 @import 'blocks/banner.scss';
 @import 'blocks/home-carousel.scss';
 @import 'blocks/special-offers-carousel.scss';
 @import 'blocks/featured-categories.scss';
 
+// Woo template styles
 @import 'woostyles/archive-page.scss';
 @import 'woostyles/recently-viewed.scss';
-@import 'templates/fibo-search-bar.scss';
 @import 'woostyles/single-product.scss';
+@import 'woostyles/form-checkout.scss';

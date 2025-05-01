@@ -1,0 +1,58 @@
+.woocommerce-billing-fields {
+    input {
+        padding: 8px 15px;
+    }
+    .select2-selection {
+        height: 38px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.woocommerce-info {
+    background-color: #ff4365;
+    color: white;
+    border-top: #ff4365;
+    padding: 20px 11%;
+    .showcoupon {
+        color: white;
+    }
+}
+.woocommerce-info::before {
+   display: none;
+}
+
+
+.woocommerce-checkout-payment {
+    background: #ff4365!important;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    .woocommerce-privacy-policy-text {
+        color: white;
+        a{ 
+            color: white;
+        }
+    }
+}
+
+.place-order {
+    button {
+        background-color: black!important;
+    }
+}
+
+form.checkout_coupon {
+    border: 1px solid black!important;
+    padding: 20px;
+    margin: 2em 0;
+    text-align: left;
+    border-radius: 5px;
+    input {
+        padding: 8px 15px;
+    }
+    button {
+        color: white!important;
+        background-color: black!important;
+    }
+}

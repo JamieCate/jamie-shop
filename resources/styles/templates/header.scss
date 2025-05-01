@@ -101,6 +101,9 @@ nav {
     .main-links {
         width: 100%;
         margin: 0;
+        @media(max-width:899px) {
+            display: none!important;
+        }
     }
     a {
         text-decoration: none;

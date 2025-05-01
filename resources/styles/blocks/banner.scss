@@ -1,15 +1,19 @@
 .banner-item {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
     align-items: center;
-
+@media(max-width: 605px) {
+    flex-wrap: wrap;
+}
 
 
 .items-container {
     display: flex;
     gap: 10px;
+    padding: 20px;
+    @media(max-width: 605px) {
+        width: 50%;
+    }
 
     .banner-link {
         display: flex;

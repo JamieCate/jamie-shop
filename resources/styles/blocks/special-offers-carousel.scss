@@ -2,14 +2,31 @@
     padding-top: 50px;
 }
 .special-offers-carousel {
+    padding-top: 50px!important;
     .slick-track {
         margin-left: 6px !important;
-        display: flex;
         gap: 20px;
-        width: -webkit-fill-available!important;
     }
     .slick-list {
-        overflow: visible;
+        overflow: hidden;
+    }
+    .offers-next-arrow {
+        top: 0;
+        position: absolute;
+        right: 5%;
+        color: white;
+        background: black;
+        padding: 10px;
+        border-radius: 3px;
+    }
+    .offers-prev-arrow {
+        right: 15%;
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        color: white;
+        background-color: black;
+        border-radius: 3px;
     }
 }
 
@@ -43,35 +60,3 @@
     }
 }
 
-
-.slick-track:before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900; 
-    content: "\f104"!important;
-    font-size: 13px; 
-    color: #000; 
-    position: absolute;
-    top: -35px;
-    right: 35px;
-    color: white;
-    background: black;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
-  .slick-track:after  {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900; 
-    content: "\f054" !important;
-    font-size: 13px; 
-    color: #000; 
-    position: absolute;
-    top: -35px;
-    right: 0;
-    color: white;
-    background: black;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-  }

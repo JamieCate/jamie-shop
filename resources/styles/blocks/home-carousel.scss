@@ -7,10 +7,17 @@
         height: auto; 
         object-fit: contain; 
     }
+    .slick-dots {
+        position: static!important;
+    }
     .slick-dots li button:before {
         font-size: 34px;
     }
     .slick-dots li {
         margin: 0;
+    }
+    .slick-next,
+    .slick-prev {
+        display: none!important;
     }
 }
