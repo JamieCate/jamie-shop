@@ -1,0 +1,13 @@
+{
+    "name": "acf/feautred-brands",
+    "title": "Featured brands block",
+    "description": "A custom block.",
+    "category": "autopaints-brighton",
+    "icon": "block-default",
+    "keywords": ["features", "brands"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "featured-brands.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "acf/promo-columns",
+    "title": "Promo Columns block",
+    "description": "A custom block.",
+    "category": "autopaints-brighton",
+    "icon": "block-default",
+    "keywords": ["promo", "promotion", "columns"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "promo-columns.php"
+    },
+    "align": "full"
+}

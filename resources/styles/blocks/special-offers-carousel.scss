@@ -50,6 +50,9 @@
         font-weight: 600;
         color: black;
         font-size: 15px;
+        @media(max-width: 600px) {
+            width: 50%;
+        }
     }
     .add-to-cart-btn {
         background-color: #ff4365;;

@@ -1,0 +1,28 @@
+.about-us-banner-container {
+    color: #fff;
+    overflow: hidden;
+    padding: 50px 0;
+    position: static;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .about-us-box {
+        padding: 20px 0;
+    }
+
+    .half-col {
+        width: 50%;
+    }
+    p {
+        font-weight: 400;
+    }
+
+    a {
+        padding: 0.5em 1em;
+        background-color: #ff4365;
+        color: white;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+}

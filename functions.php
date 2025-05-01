@@ -73,6 +73,9 @@ collect(['setup', 'filters'])
         register_block_type( get_template_directory() . '/blocks/home-carousel');
         register_block_type( get_template_directory() . '/blocks/special-offers-carousel');
         register_block_type( get_template_directory() . '/blocks/featured-categories');
+        register_block_type( get_template_directory() . '/blocks/featured-brands');
+        register_block_type( get_template_directory() . '/blocks/promo-columns');
+        register_block_type( get_template_directory() . '/blocks/about-us-banner');
     }
 
     function enqueue_sorting_script() {
@@ -83,7 +86,7 @@ collect(['setup', 'filters'])
             filemtime(get_theme_file_path('/resources/scripts/filters/sorting.filter.js')),
             true 
         );
-        
+
         // Pass AJAX URL to JavaScript
         wp_localize_script('sorting-filter', 'ajax_object', [
             'ajax_url' => admin_url('admin-ajax.php')

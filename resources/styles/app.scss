@@ -10,9 +10,13 @@
 @import 'blocks/home-carousel.scss';
 @import 'blocks/special-offers-carousel.scss';
 @import 'blocks/featured-categories.scss';
+@import 'blocks/featured-brands.scss';
+@import 'blocks/promo-columns.scss';
+@import 'blocks/about-us-banner.scss';
 
 // Woo template styles
 @import 'woostyles/archive-page.scss';
 @import 'woostyles/recently-viewed.scss';
 @import 'woostyles/single-product.scss';
 @import 'woostyles/form-checkout.scss';
+@import 'woostyles/cart.scss';

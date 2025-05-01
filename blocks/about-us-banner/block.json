@@ -1,0 +1,13 @@
+{
+    "name": "acf/about-us",
+    "title": "About us banner block",
+    "description": "A custom block.",
+    "category": "autopaints-brighton",
+    "icon": "block-default",
+    "keywords": ["about", "us", "banner"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "about-us-banner.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,21 @@
+.promo-columns {
+    justify-content: space-between;
+    .column-container {
+        padding: 20px;
+        min-height: 300px;
+        overflow: hidden;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-start;
+    }
+    p {
+        max-width: 335px;
+    }
+    a {
+        padding: 0.5em 1em;
+        background-color: #ff4365;
+        color: white;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+}
