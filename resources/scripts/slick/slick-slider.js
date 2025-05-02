@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
       nextArrow: '<i class="fa-solid fa-chevron-right offers-next-arrow"></i>',
       responsive: [
         {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

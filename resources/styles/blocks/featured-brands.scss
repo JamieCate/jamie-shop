@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @media(max-width:768px) {
+        flex-direction: column;
+    }
 
     .brand-img-container {
         flex: 1 1 0;
@@ -12,6 +15,9 @@
         align-items: center;
         justify-content: center;
         max-width: 100%;
+        @media(max-width:768px) {
+            border-bottom: #eee 2px solid;
+        }
     }
 
     img {

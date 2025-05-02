@@ -13,6 +13,14 @@
 
     .half-col {
         width: 50%;
+        @media(max-width:768px) {
+            width: 100%;
+        }
+    }
+    .empty-col {
+        @media(max-width:768px) {
+            display: none;
+        }
     }
     p {
         font-weight: 400;

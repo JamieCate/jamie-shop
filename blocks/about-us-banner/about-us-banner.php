@@ -22,6 +22,6 @@ $link = get_field('link');
         <p><?php echo($description) ?></p>
         <a href="<?php echo $link['url']?>"><?php echo($link['title']) ?></a>
     </div>
-<div class="half-col"></div>
+<div class="half-col empty-col"></div>
     </div>
 </div>
