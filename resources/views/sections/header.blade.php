@@ -45,13 +45,13 @@
                 </li>
             </ul>
             <ul class="d-flex main-links">
-                <li class="webpage_link"><a href="">About Us</a></li>
-                <li class="webpage_link"><a href="">Contact Us</a></li>
+                <li class="webpage_link"><a href="/about">About Us</a></li>
+                <li class="webpage_link"><a href="/contact">Contact Us</a></li>
                 <li class="webpage_link"><a href="">Find A Car Paint Code</a></li>
-                <li class="webpage_link"><a href="">Privacy and Security</a></li>
-                <li class="webpage_link"><a href="">Delivery/Collection Info</a></li>
-                <li class="webpage_link"><a href="">2K &amp; Cellulose Paint</a></li>
-                <li class="webpage_link"><a href="">Trade Account</a></li>
+                <li class="webpage_link"><a href="/privacy-and-security">Privacy and Security</a></li>
+                <li class="webpage_link"><a href="/delivery-collection-info">Delivery/Collection Info</a></li>
+                <li class="webpage_link"><a href="/2k-cellulose-paint">2K &amp; Cellulose Paint</a></li>
+                <li class="webpage_link"><a href="/trade-account">Trade Account</a></li>
             </ul>
         </div>
     </div>
