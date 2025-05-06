@@ -115,6 +115,11 @@ collect(['setup', 'filters'])
             null,
             true
         );
+
+        wp_enqueue_script('wc-add-to-cart-variation');
+
     }
+
+    
     
     add_action('wp_enqueue_scripts', 'enqueue_sorting_script');
