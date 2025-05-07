@@ -14,3 +14,16 @@
     color: white;
     transition:  0.4s;
 }
+
+
+.variation-selector {
+    display: flex;
+    flex-direction: column;
+    select {
+        max-width: 200px;
+        padding: 10px 5px;
+    }
+}
+.quantity {
+    margin-top: 20px;
+}
