@@ -1,0 +1,1 @@
+<p>Product cards here</p>

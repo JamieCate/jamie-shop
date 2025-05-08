@@ -123,3 +123,19 @@ collect(['setup', 'filters'])
     
     
     add_action('wp_enqueue_scripts', 'enqueue_sorting_script');
+
+
+    add_filter('template_include', function($template) {
+        if (is_product_category()) {
+            $blade_path = get_theme_file_path('resources/views/woocommerce/archive-product.blade.php');
+            if (file_exists($blade_path)) {
+                // Use Sage's view composer if available
+                if (function_exists('App\\template')) {
+                    return \App\template('woocommerce.archive-product');
+                }
+                // Fallback to direct rendering
+                return get_theme_file_path('woocommerce/archive-product.php');
+            }
+        }
+        return $template;
+    }, 100);

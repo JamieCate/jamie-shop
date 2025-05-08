@@ -38,7 +38,39 @@
                         <!-- This needs to be dynamic, will come back here -->
                         <div class="tab-pane fade my-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">No
                             reviews for this product yet</div>
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            @php
+                                $attributes = $product->get_attributes();
+                            @endphp
+
+                            @if(!empty($attributes))
+                                <table class="woocommerce-product-attributes shop_attributes">
+                                    @foreach($attributes as $attribute)
+                                        <tr class="woocommerce-product-attributes-item">
+                                            <th class="woocommerce-product-attributes-item__label">
+                                                {{ wc_attribute_label($attribute->get_name()) }}:
+                                            </th>
+                                            <td class="woocommerce-product-attributes-item__value">
+                                                @php
+                                                    $values = [];
+                                                    if ($attribute->is_taxonomy()) {
+                                                        $attribute_terms = $attribute->get_terms();
+                                                        foreach ($attribute_terms as $term) {
+                                                            $values[] = $term->name;
+                                                        }
+                                                    } else {
+                                                        $values = $attribute->get_options();
+                                                    }
+                                                    echo implode(', ', $values);
+                                                @endphp
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            @else
+                                <p>No attributes listed for this product.</p>
+                            @endif
+                        </div>
                     </div>
                 </div>
 
