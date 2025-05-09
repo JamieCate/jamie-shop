@@ -9,8 +9,8 @@
 
 <?php echo view('sections.header')->render(); ?>
 
-<main class="woocommerce-archive container">
-<div class="product-page-block incategory-desc">
+<main class="woocommerce-archive archive-main-container">
+<div class="product-page-block incategory-desc container">
 <?php if (is_product_category()) : ?>
   <?php
   $current_cat = get_queried_object();
@@ -28,21 +28,28 @@
 
   if (!empty($subcategories)) :
   ?>
-    <div class="sub-category-grid">
-      <?php foreach ($subcategories as $subcategory) :
+<div class="sub-category-grid">
+    <?php foreach ($subcategories as $subcategory) :
         $thumbnail_id = get_term_meta($subcategory->term_id, 'thumbnail_id', true);
         $image = $thumbnail_id ? wp_get_attachment_image_url($thumbnail_id, 'medium') : wc_placeholder_img_src();
+        $is_placeholder = strpos($image, 'woocommerce-placeholder') !== false;
         ?>
         <div class="sub-category-grid-items">
-          <a href="<?php echo get_term_link($subcategory); ?>" class="sub-category-grid-item">
-            <?php if (strpos($image, 'woocommerce-placeholder') === false) { ?>
-              <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($subcategory->name); ?>" class="cat-img" height="195">
-            <?php } ?>
-            <p><?php echo esc_html($subcategory->name); ?></p>
-          </a>
+            <a href="<?php echo get_term_link($subcategory); ?>" class="sub-category-grid-item">
+                <?php if (!$is_placeholder) : ?>
+                    <div class="image-wrapper">
+                        <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($subcategory->name); ?>" class="cat-img">
+                    </div>
+                <?php endif; ?>
+                
+                <p class="<?php echo $is_placeholder ? 'no-image-class' : ''; ?>">
+                    <?php echo esc_html($subcategory->name); ?>
+                </p>
+            </a>
         </div>
-      <?php endforeach; ?>
-    </div>
+    <?php endforeach; ?>
+</div>
+
 
   <?php else : ?>
     <!-- No subcategories, show products -->

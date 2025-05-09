@@ -1,0 +1,49 @@
+.archive-main-container {
+    background-color: #F3F3F3;
+    padding-top: 50px;
+    h1 {
+        margin-top: 0;
+        padding-top: 21.440px;
+    }
+    .incategory-desc {
+        background-color: white;
+    }
+        .sub-category-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+            .sub-category-grid-items {
+
+                .sub-category-grid-item {
+                    display: block;
+                    text-decoration: none;
+                    color: inherit;
+                    
+                    .image-wrapper {
+                        border: 1px solid #DDDDDD;
+                        padding: 20px;
+                        overflow: hidden; 
+                    }
+
+                    .cat-img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                        aspect-ratio: 1 / 1;
+                        transition: transform 0.3s ease;
+                        display: block;
+                        
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+}
