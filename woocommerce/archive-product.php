@@ -15,11 +15,9 @@
   <?php
   $current_cat = get_queried_object();
 
-  // Display current category title and description
   echo '<h1>' . esc_html($current_cat->name) . '</h1>';
   echo '<div>' . wpautop($current_cat->description) . '</div>';
 
-  // Get direct child categories of the current category
   $subcategories = get_terms([
       'taxonomy'   => 'product_cat',
       'parent'     => $current_cat->term_id,

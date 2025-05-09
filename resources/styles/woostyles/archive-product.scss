@@ -14,11 +14,19 @@
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 
             .sub-category-grid-items {
-
+                .no-image-class {
+                    padding: 91px 22px;
+                    border: 1px solid #DDDDDD;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
                 .sub-category-grid-item {
                     display: block;
                     text-decoration: none;
                     color: inherit;
+
+                  
                     
                     .image-wrapper {
                         border: 1px solid #DDDDDD;
