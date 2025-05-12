@@ -17,6 +17,7 @@
 
   echo '<h1>' . esc_html($current_cat->name) . '</h1>';
   echo '<div>' . wpautop($current_cat->description) . '</div>';
+ 
 
   $subcategories = get_terms([
       'taxonomy'   => 'product_cat',
@@ -27,6 +28,7 @@
   if (!empty($subcategories)) :
   ?>
 <div class="sub-category-grid">
+
     <?php foreach ($subcategories as $subcategory) :
         $thumbnail_id = get_term_meta($subcategory->term_id, 'thumbnail_id', true);
         $image = $thumbnail_id ? wp_get_attachment_image_url($thumbnail_id, 'medium') : wc_placeholder_img_src();

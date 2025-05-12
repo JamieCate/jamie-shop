@@ -7,15 +7,14 @@ $current_cat = get_queried_object();
 
 $args = array(
     'post_type' => 'product',
-    'posts_per_page' => 12,
     'post_status' => 'publish',
-    'tax_query' => array(
+    'tax_query' => $current_cat ? array(
         array(
             'taxonomy' => 'product_cat',
             'field' => 'term_id',
             'terms' => $current_cat->term_id,
         ),
-    ),
+    ) : array(),
 );
 
 $loop = new WP_Query($args);
