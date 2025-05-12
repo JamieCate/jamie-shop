@@ -40,7 +40,7 @@
     
     img {
         max-height: 200px;
-        max-width: 237px;
+        max-width: fit-content;
         object-fit: cover;
     }
     a {
@@ -55,7 +55,7 @@
         }
     }
     .add-to-cart-btn {
-        background-color: #ff4365;;
+        background-color: #ff4365;
         border: 3px solid #ff4365;
         padding: 10.5px;
         border-radius: 3px;

@@ -77,47 +77,69 @@
                 <div class="">
                     {{-- Add to Cart Form --}}
 
-                    <form class="variations_form cart" action="{{ esc_url($product->get_permalink()) }}" method="post"
-                        enctype="multipart/form-data" data-product_id="{{ $product->get_id() }}"
-                        data-product_variations="{{ htmlspecialchars(json_encode($product->get_available_variations())) }}">
+                    @if ($product->is_type('variable'))
+                        <form class="variations_form cart" action="{{ esc_url($product->get_permalink()) }}" method="post"
+                            enctype="multipart/form-data" data-product_id="{{ $product->get_id() }}"
+                            data-product_variations="{{ htmlspecialchars(json_encode($product->get_available_variations())) }}">
 
-                        @php wp_nonce_field('woocommerce-add-to-cart', 'woocommerce-cart-nonce'); @endphp
-                        <input type="hidden" name="add-to-cart" value="{{ $product->get_id() }}" />
+                            @php wp_nonce_field('woocommerce-add-to-cart', 'woocommerce-cart-nonce'); @endphp
+                            <input type="hidden" name="add-to-cart" value="{{ $product->get_id() }}" />
 
-                        <div class="variation">
-                            <h1>@php echo get_the_title(); @endphp </h1>
-                            <div class="variation-selector">
-                                <label for="variation_select">SELECT GRIT: </label>
-                                <select name="variation_id" id="variation_id" class="variation_id">
-                                    @foreach ($product->get_available_variations() as $variation)
-                                        @php
-                                            $variation_label = [];
-                                            foreach ($variation['attributes'] as $attribute_name => $attribute_value) {
-                                                $variation_label[] = $attribute_value;
-                                            }
-                                            $variation_label = implode(', ', $variation_label);
-                                        @endphp
-                                        <option value="{{ $variation['variation_id'] }}">
-                                            {{ $variation_label }} - {!! wc_price($variation['display_price']) !!}
-                                        </option>
-                                    @endforeach
-                                </select>
+                            <div class="variation">
+                            <h1>{{ html_entity_decode(get_the_title()) }}</h1>
+                                <div class="variation-selector">
+                                    <label for="variation_select">SELECT GRIT: </label>
+                                    <select name="variation_id" id="variation_id" class="variation_id">
+                                        @foreach ($product->get_available_variations() as $variation)
+                                            @php
+                                                $variation_label = [];
+                                                foreach ($variation['attributes'] as $attribute_name => $attribute_value) {
+                                                    $variation_label[] = $attribute_value;
+                                                }
+                                                $variation_label = implode(', ', $variation_label);
+                                            @endphp
+                                            <option value="{{ $variation['variation_id'] }}">
+                                                {{ $variation_label }} - {!! wc_price($variation['display_price']) !!}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
-                        </div>
 
+                            <div class="mb-4">
+                                @php
+                                    woocommerce_quantity_input([
+                                        'min_value' => $product->get_min_purchase_quantity(),
+                                        'max_value' => $product->get_max_purchase_quantity(),
+                                        'input_value' => 1,
+                                    ], $product);
+                                @endphp
+                            </div>
 
-                        <div class="mb-4">
-                            @php
-                                woocommerce_quantity_input([
-                                    'min_value' => $product->get_min_purchase_quantity(),
-                                    'max_value' => $product->get_max_purchase_quantity(),
-                                    'input_value' => 1,
-                                ], $product);
-                            @endphp
-                        </div>
+                            <button type="submit" class="px-6 py-3 single-submit-btn">Add to Cart</button>
+                        </form>
+                    @else
+                        {{-- Simple product fallback --}}
+                        <form class="cart" action="{{ esc_url($product->get_permalink()) }}" method="post"
+                            enctype="multipart/form-data">
+                            @php wp_nonce_field('woocommerce-add-to-cart', 'woocommerce-cart-nonce'); @endphp
+                            <h1>{{ html_entity_decode(get_the_title()) }}</h1>
+                            <input type="hidden" name="add-to-cart" value="{{ $product->get_id() }}" />
 
-                        <button type="submit" class="px-6 py-3 single-submit-btn">Add to Cart</button>
-                    </form>
+                            <div class="mb-4">
+                                @php
+                                    woocommerce_quantity_input([
+                                        'min_value' => $product->get_min_purchase_quantity(),
+                                        'max_value' => $product->get_max_purchase_quantity(),
+                                        'input_value' => 1,
+                                    ], $product);
+                                @endphp
+                            </div>
+
+                            <button type="submit" class="px-6 py-3 single-submit-btn">Add to Cart</button>
+                        </form>
+                    @endif
+
 
 
 

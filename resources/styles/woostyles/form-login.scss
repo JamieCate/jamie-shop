@@ -1,0 +1,23 @@
+.password-input {
+    input {
+        padding: 8px;
+    }
+}
+
+.woocommerce-form-row {
+    #username {
+        padding: 8px;
+    }
+}
+
+.woocommerce-form-login__submit {
+    background-color: #ff4365!important;
+    border: 3px solid #ff4365!important;
+    padding: 10.5px!important;
+    border-radius: 3px!important;
+    color: white!important;
+}
+
+.woocommerce form.login {
+    border: solid 1px #ff4365!important;
+}

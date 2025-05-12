@@ -27,12 +27,15 @@ $loop = new WP_Query($args);
             $loop->the_post();
             global $product;
             ?>
+            <div class="product-card">
+                <a href="<?php the_permalink(); ?>">
+                    <?php echo $product->get_image(); ?>
+                    <p><?php the_title(); ?></p>
+                    <p class="price"><?php echo $product->get_price_html(); ?></p>
+                    <a href="<?php echo esc_url( '?add-to-cart=' . $product->get_id() ); ?>" class="add-to-cart-btn">Add to cart</a>
+                </a>
 
-            <a href="<?php the_permalink(); ?>">
-                <?php echo $product->get_image(); ?>
-                <h2><?php the_title(); ?></h2>
-                <span class="price"><?php echo $product->get_price_html(); ?></span>
-            </a>
+            </div>
 
             <?php
         endwhile;

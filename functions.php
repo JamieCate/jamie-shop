@@ -139,3 +139,11 @@ collect(['setup', 'filters'])
         }
         return $template;
     }, 100);
+
+    add_action( 'template_redirect', function() {
+        if ( is_cart() && WC()->cart->is_empty() && !is_admin() ) {
+            wp_safe_redirect( home_url() );
+            exit;
+        }
+    });
+    
