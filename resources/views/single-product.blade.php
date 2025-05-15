@@ -10,10 +10,10 @@
     @if ($product instanceof \WC_Product)
 
         <div class="container mx-auto my-10 mt-5">
-            <div class="d-flex">
+            <div class="d-flex single-product-container">
 
                 {{-- Product Image --}}
-                <div class="col-6">
+                <div class="col-6 mobile-width-col">
                     @php
                         $image_id = $product->get_image_id();
                         $image_url = wp_get_attachment_url($image_id);

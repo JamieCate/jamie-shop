@@ -1,3 +1,15 @@
+.single-product-container {
+    gap: 50px;
+    @media(max-width:899px) {
+        flex-direction: column-reverse;
+    }
+    .mobile-width-col {
+        @media(max-width:899px) {
+        width: 100%!important;
+        }
+    }
+}
+
 .single-main-img {
     max-height: 400px;
 }
