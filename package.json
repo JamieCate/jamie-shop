@@ -19,10 +19,10 @@
     "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
-    "@roots/bud": "6.20.0",
+    "@roots/bud": "^6.6.6",
     "@roots/bud-sass": "^6.24.0",
-    "@roots/bud-tailwindcss": "6.20.0",
-    "@roots/sage": "6.20.0",
+    "@roots/bud-tailwindcss": "^6.6.6",
+    "@roots/sage": "^6.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.84.0",
